@@ -10,8 +10,9 @@ import {
   LogoLink,
   HeaderLogo,
   MenuList,
-  MenuLink,
+  SignWrapper,
   MenuItem,
+  MenuLink,
 } from "../styles/HeaderStyles";
 
 export const Header = () => {
@@ -23,6 +24,8 @@ export const Header = () => {
             <LogoLink href="/">
               <HeaderLogo src={ShortlyLogo} alt="shortly logo" />
             </LogoLink>
+          </LeftNavWrapper>
+          <RightNavWrapper>
             <MenuList>
               <MenuItem>
                 <MenuLink className="active" href="#">
@@ -36,12 +39,12 @@ export const Header = () => {
                 <MenuLink href="#">Resources</MenuLink>
               </MenuItem>
             </MenuList>
-          </LeftNavWrapper>
-          <RightNavWrapper>
-            <MenuLink href="#" marginRight="3.5">
-              Login
-            </MenuLink>
-            <Button>Sign Up</Button>
+            <SignWrapper>
+              <MenuLink href="#" marginRight="3.5">
+                Login
+              </MenuLink>
+              <Button>Sign Up</Button>
+            </SignWrapper>
           </RightNavWrapper>
         </NavWrapper>
       </Wrap>

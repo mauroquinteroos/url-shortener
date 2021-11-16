@@ -18,6 +18,10 @@ const ButtonTemplate = styled.button`
   line-height: 1.75;
   cursor: pointer;
   transition: all 0.3s ease 0s;
+
+  &:hover {
+    opacity: 0.6;
+  }
 `;
 
 export const Button = ({ children, className }) => {
