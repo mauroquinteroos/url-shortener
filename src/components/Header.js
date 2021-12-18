@@ -1,5 +1,6 @@
 import React from "react";
 import ShortlyLogo from "../images/logo.svg";
+import IconHamburger from "../images/icon-hamburger.svg";
 import { Wrap } from "../components/Wrap";
 import { Button } from "../components/Button";
 import {
@@ -13,6 +14,8 @@ import {
   SignWrapper,
   MenuItem,
   MenuLink,
+  NavHamburgerButton,
+  HamburgerImage,
 } from "../styles/HeaderStyles";
 
 export const Header = () => {
@@ -25,6 +28,9 @@ export const Header = () => {
               <HeaderLogo src={ShortlyLogo} alt="shortly logo" />
             </LogoLink>
           </LeftNavWrapper>
+          <NavHamburgerButton>
+            <HamburgerImage src={IconHamburger} alt="Icon Hamburger" />
+          </NavHamburgerButton>
           <RightNavWrapper>
             <MenuList>
               <MenuItem>

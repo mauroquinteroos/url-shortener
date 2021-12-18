@@ -22,6 +22,10 @@ export const RightNavWrapper = styled.div`
   align-items: center;
   width: 100%;
   margin-left: 4.8rem;
+
+  @media screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 export const LogoLink = styled.a`
@@ -81,4 +85,26 @@ export const MenuLink = styled.a`
   &:hover {
     color: ${({ theme }) => theme.colors.dark};
   }
+`;
+
+// Responsive Design
+export const NavHamburgerButton = styled.button`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  padding: 0.6rem;
+  border: none;
+  background-color: transparent;
+
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
+export const HamburgerImage = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
 `;
