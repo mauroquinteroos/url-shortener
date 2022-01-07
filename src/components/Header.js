@@ -1,8 +1,7 @@
-import React from "react";
+import React, { useState } from "react";
 import ShortlyLogo from "../images/logo.svg";
 import IconHamburger from "../images/icon-hamburger.svg";
 import { Wrap } from "../components/Wrap";
-import { Button } from "../components/Button";
 import {
   HeaderWrapper,
   NavWrapper,
@@ -16,9 +15,16 @@ import {
   MenuLink,
   NavHamburgerButton,
   HamburgerImage,
+  HeaderButton,
 } from "../styles/HeaderStyles";
 
 export const Header = () => {
+  const [isOpen, setOpen] = useState(false);
+
+  const onOpen = (e) => {
+    console.log(e);
+  };
+
   return (
     <HeaderWrapper>
       <Wrap>
@@ -28,7 +34,7 @@ export const Header = () => {
               <HeaderLogo src={ShortlyLogo} alt="shortly logo" />
             </LogoLink>
           </LeftNavWrapper>
-          <NavHamburgerButton>
+          <NavHamburgerButton onClick={onOpen}>
             <HamburgerImage src={IconHamburger} alt="Icon Hamburger" />
           </NavHamburgerButton>
           <RightNavWrapper>
@@ -49,7 +55,7 @@ export const Header = () => {
               <MenuLink href="#" marginRight="3.5">
                 Login
               </MenuLink>
-              <Button>Sign Up</Button>
+              <HeaderButton>Sign Up</HeaderButton>
             </SignWrapper>
           </RightNavWrapper>
         </NavWrapper>
