@@ -31,6 +31,12 @@ export const RightNavWrapper = styled.div`
   border-radius: 0;
   background-color: ${({ theme }) => theme.colors.white};
 
+  transition: top 0.3s ease-in-out 0s;
+
+  &.active {
+    top: 14%;
+  }
+
   @media screen and (max-width: 768px) {
     flex-direction: column;
 
@@ -42,7 +48,7 @@ export const RightNavWrapper = styled.div`
     padding: 2rem 0;
     margin-left: 0;
 
-    border-radius: 2.2rem;
+    border-radius: 1.2rem;
     background-color: ${({ theme }) => theme.colors.primary2};
   }
 `;

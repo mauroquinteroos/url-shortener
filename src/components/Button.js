@@ -21,7 +21,8 @@ export const Button = styled.button`
   line-height: 1.75;
 
   cursor: pointer;
-  transition: all 0.3s ease 0s;
+  transition: background-color 0.3s ease 0s, color 0.3s ease 0s,
+    color 0.3s ease 0s;
 
   &:hover {
     opacity: 0.6;

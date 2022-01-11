@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import ShortlyLogo from "../images/logo.svg";
 import IconHamburger from "../images/icon-hamburger.svg";
 import { Wrap } from "../components/Wrap";
@@ -20,10 +20,28 @@ import {
 
 export const Header = () => {
   const [isOpen, setOpen] = useState(false);
+  const onOpen = () => setOpen(!isOpen);
+  const getWidth = () =>
+    window.innerWidth ||
+    document.documentElement.clientWidth ||
+    document.body.clientWidth;
 
-  const onOpen = (e) => {
-    console.log(e);
-  };
+  useEffect(() => {
+    let timeOutId = null;
+    const resizeListener = () => {
+      clearTimeout(timeOutId);
+
+      timeOutId = setTimeout(() => {
+        let width = getWidth();
+        if (width > 768) {
+          setOpen(false);
+        }
+      }, 150);
+    };
+    window.addEventListener("resize", resizeListener);
+
+    return () => window.addEventListener("resize", resizeListener);
+  }, []);
 
   return (
     <HeaderWrapper>
@@ -37,7 +55,7 @@ export const Header = () => {
           <NavHamburgerButton onClick={onOpen}>
             <HamburgerImage src={IconHamburger} alt="Icon Hamburger" />
           </NavHamburgerButton>
-          <RightNavWrapper>
+          <RightNavWrapper className={isOpen ? "active" : ""}>
             <MenuList>
               <MenuItem>
                 <MenuLink className="active" href="#">
