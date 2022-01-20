@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+const Button = styled.button`
   display: inline-block;
 
   min-width: 10rem;
@@ -28,3 +28,5 @@ export const Button = styled.button`
     opacity: 0.6;
   }
 `;
+
+export default Button;

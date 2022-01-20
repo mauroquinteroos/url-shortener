@@ -1,14 +1,12 @@
 import React from "react";
-import { Header } from "../components/Header";
-import { Wrap } from "../components/Wrap";
+import Header from "../components/Header";
+import Hero from "../components/Hero";
 
 const Home = () => {
   return (
     <>
       <Header />
-      <Wrap>
-        <h1>Hello World</h1>
-      </Wrap>
+      <Hero />
     </>
   );
 };

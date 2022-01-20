@@ -18,6 +18,7 @@ const GlobalStyles = createGlobalStyle`
     padding: 0;
     font-size: ${({ theme }) => theme.fontSizes.text.normal};
     font-family:  ${({ theme }) => theme.fontFamily};
+    overflow: hidden;
   }
 `;
 

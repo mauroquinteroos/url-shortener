@@ -24,7 +24,7 @@ const Theme = {
       normal: "3.4rem",
     },
     title: {
-      normal: "7.2rem",
+      normal: "6.8rem",
     },
   },
   fontWeights: {

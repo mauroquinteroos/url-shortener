@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import ShortlyLogo from "../images/logo.svg";
 import IconHamburger from "../images/icon-hamburger.svg";
-import { Wrap } from "../components/Wrap";
+import Wrap from "../components/Wrap";
 import {
   HeaderWrapper,
   NavWrapper,
@@ -18,7 +18,7 @@ import {
   HeaderButton,
 } from "../styles/HeaderStyles";
 
-export const Header = () => {
+const Header = () => {
   const [isOpen, setOpen] = useState(false);
   const onOpen = () => setOpen(!isOpen);
   const getWidth = () =>
@@ -81,3 +81,5 @@ export const Header = () => {
     </HeaderWrapper>
   );
 };
+
+export default Header;
