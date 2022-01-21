@@ -6,9 +6,7 @@ const Wrap = styled.div`
   max-width: 120rem;
 
   margin: 0 auto;
-  padding: 0 1.6rem;
-
-  overflow-x: hidden;
+  padding: 1.6rem;
 `;
 
 export default Wrap;

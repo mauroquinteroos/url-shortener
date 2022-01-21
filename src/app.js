@@ -11,14 +11,15 @@ const GlobalStyles = createGlobalStyle`
   html {
     margin: 0;
     padding: 0;
+
     font-size: 62.5%;
   }
   body {
     margin: 0;
     padding: 0;
+
     font-size: ${({ theme }) => theme.fontSizes.text.normal};
     font-family:  ${({ theme }) => theme.fontFamily};
-    overflow: hidden;
   }
 `;
 

@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../components/Button";
 
 export const HeaderWrapper = styled.header`
-  padding-top: 5.2rem;
+  padding-top: 4.5rem;
 `;
 
 export const NavWrapper = styled.nav`

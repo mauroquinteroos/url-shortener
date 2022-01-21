@@ -6,10 +6,9 @@ import {
   HeroButton,
   HeroDescription,
   HeroImage,
+  HeroImageWrapper,
   HeroTitle,
   HeroWrap,
-  HeroWrapper,
-  ImageWrapper,
 } from "../styles/HeroStyles";
 
 const Hero = () => {
@@ -17,7 +16,11 @@ const Hero = () => {
     <>
       <HeroWrap>
         <Wrap>
-          <HeroWrapper>
+          <HeroImageWrapper>
+            <HeroImage
+              src={WorkingHeroImage}
+              alt="working hero image shortly"
+            />
             <ContentWrapper>
               <HeroTitle>More than just shorter links</HeroTitle>
               <HeroDescription>
@@ -26,13 +29,7 @@ const Hero = () => {
               </HeroDescription>
               <HeroButton>Get Started</HeroButton>
             </ContentWrapper>
-            <ImageWrapper>
-              <HeroImage
-                src={WorkingHeroImage}
-                alt="working hero image shortly"
-              />
-            </ImageWrapper>
-          </HeroWrapper>
+          </HeroImageWrapper>
         </Wrap>
       </HeroWrap>
     </>
