@@ -6,6 +6,7 @@ const Theme = {
     lighter: "rgb(191, 191, 191)",
     light: "rgb(158, 154, 167)",
     white: "rgb(255, 255, 255)",
+    gray: "rgb(240, 241, 246)",
     dark: "rgb(53, 50, 62)",
     darker: "rgb(35, 33, 39)",
   },

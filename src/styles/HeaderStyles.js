@@ -1,23 +1,23 @@
 import styled from "styled-components";
 import Button from "../components/Button";
 
-export const HeaderWrapper = styled.header`
+export const HeaderWrap = styled.header`
   padding-top: ${({ theme }) => theme.headerPadding};
 `;
 
-export const NavWrapper = styled.nav`
+export const NavWrap = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
 `;
 
-export const LeftNavWrapper = styled.div`
+export const LeftNavWrap = styled.div`
   display: flex;
   justify-content: flex-start;
   align-items: center;
 `;
 
-export const RightNavWrapper = styled.div`
+export const RightNavWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -85,7 +85,7 @@ export const MenuList = styled.ul`
   }
 `;
 
-export const SignWrapper = styled.div`
+export const SignWrap = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

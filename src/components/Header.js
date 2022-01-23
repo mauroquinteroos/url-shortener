@@ -3,14 +3,14 @@ import ShortlyLogo from "../images/logo.svg";
 import IconHamburger from "../images/icon-hamburger.svg";
 import Wrap from "../components/Wrap";
 import {
-  HeaderWrapper,
-  NavWrapper,
-  LeftNavWrapper,
-  RightNavWrapper,
+  HeaderWrap,
+  NavWrap,
+  LeftNavWrap,
+  RightNavWrap,
   LogoLink,
   HeaderLogo,
   MenuList,
-  SignWrapper,
+  SignWrap,
   MenuItem,
   MenuLink,
   NavHamburgerButton,
@@ -44,18 +44,18 @@ const Header = () => {
   }, []);
 
   return (
-    <HeaderWrapper>
+    <HeaderWrap>
       <Wrap>
-        <NavWrapper>
-          <LeftNavWrapper>
+        <NavWrap>
+          <LeftNavWrap>
             <LogoLink href="/">
               <HeaderLogo src={ShortlyLogo} alt="shortly logo" />
             </LogoLink>
-          </LeftNavWrapper>
+          </LeftNavWrap>
           <NavHamburgerButton onClick={onOpen}>
             <HamburgerImage src={IconHamburger} alt="Icon Hamburger" />
           </NavHamburgerButton>
-          <RightNavWrapper className={isOpen ? "active" : ""}>
+          <RightNavWrap className={isOpen ? "active" : ""}>
             <MenuList>
               <MenuItem>
                 <MenuLink className="active" href="#">
@@ -69,16 +69,16 @@ const Header = () => {
                 <MenuLink href="#">Resources</MenuLink>
               </MenuItem>
             </MenuList>
-            <SignWrapper>
+            <SignWrap>
               <MenuLink href="#" marginRight="3.5">
                 Login
               </MenuLink>
               <HeaderButton>Sign Up</HeaderButton>
-            </SignWrapper>
-          </RightNavWrapper>
-        </NavWrapper>
+            </SignWrap>
+          </RightNavWrap>
+        </NavWrap>
       </Wrap>
-    </HeaderWrapper>
+    </HeaderWrap>
   );
 };
 

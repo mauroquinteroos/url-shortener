@@ -14,9 +14,9 @@ export const HeroWrap = styled.div`
   }
 `;
 
-export const HeroImageWrapper = styled.div``;
+export const HeroImageWrap = styled.div``;
 
-export const ContentWrapper = styled.div`
+export const ContentWrap = styled.div`
   margin-top: 0;
 
   @media screen and (max-width: 768px) {
