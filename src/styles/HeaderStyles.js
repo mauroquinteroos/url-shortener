@@ -2,7 +2,7 @@ import styled from "styled-components";
 import Button from "../components/Button";
 
 export const HeaderWrapper = styled.header`
-  padding-top: 4.5rem;
+  padding-top: ${({ theme }) => theme.headerPadding};
 `;
 
 export const NavWrapper = styled.nav`
@@ -24,6 +24,7 @@ export const RightNavWrapper = styled.div`
   align-items: center;
 
   position: relative;
+  z-index: 1000;
   width: 100%;
 
   margin-left: 4.8rem;
@@ -34,7 +35,7 @@ export const RightNavWrapper = styled.div`
   transition: top 0.3s ease-in-out 0s;
 
   &.active {
-    top: 14%;
+    top: calc(${({ theme }) => theme.headerPadding} + 8rem);
   }
 
   @media screen and (max-width: 768px) {
@@ -171,6 +172,8 @@ export const NavHamburgerButton = styled.button`
   padding: 0.6rem;
   border: none;
   background-color: transparent;
+
+  cursor: pointer;
 
   @media screen and (min-width: 769px) {
     display: none;

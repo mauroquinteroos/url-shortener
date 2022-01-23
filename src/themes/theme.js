@@ -25,8 +25,8 @@ const Theme = {
     },
     title: {
       normal: "6.8rem",
-      medium: "6rem",
-      small: "5rem",
+      medium: "5.8rem",
+      small: "4.8rem",
     },
   },
   fontWeights: {
@@ -34,7 +34,7 @@ const Theme = {
     medium: "500",
     bold: "700",
   },
-  breakPoints: {},
+  headerPadding: "4.5rem",
 };
 
 export default Theme;

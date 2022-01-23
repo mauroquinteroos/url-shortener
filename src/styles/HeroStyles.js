@@ -4,16 +4,24 @@ import Button from "../components/Button";
 export const HeroWrap = styled.div`
   position: relative;
 
-  padding: 10rem 0;
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+
   overflow: hidden;
+
+  @media screen and (max-width: 768px) {
+    padding-top: 0;
+  }
 `;
 
-export const HeroImageWrapper = styled.div`
-  display: relative;
-`;
+export const HeroImageWrapper = styled.div``;
 
 export const ContentWrapper = styled.div`
-  text-align: left;
+  margin-top: 0;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 4rem;
+  }
 `;
 
 export const HeroTitle = styled.h1`
@@ -24,13 +32,18 @@ export const HeroTitle = styled.h1`
   font-size: ${({ theme }) => theme.fontSizes.title.normal};
   font-weight: ${({ theme }) => theme.fontWeights.bold};
   color: ${({ theme }) => theme.colors.darker};
+  text-align: left;
   line-height: 1.2;
 
-  @media screen and (max-width: 1500px) {
+  @media screen and (max-width: 1000px) {
     font-size: ${({ theme }) => theme.fontSizes.title.medium};
   }
-  @media screen and (max-width: 1080px) {
+
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+
     font-size: ${({ theme }) => theme.fontSizes.title.small};
+    text-align: center;
   }
 `;
 
@@ -41,48 +54,55 @@ export const HeroDescription = styled.p`
   margin-top: 0.5em;
 
   color: ${({ theme }) => theme.colors.light};
+  text-align: left;
   line-height: 1.6;
 
   @media screen and (max-width: 1000px) {
-    max-width: 40ch;
+    max-width: 42ch;
+  }
+
+  @media screen and (max-width: 768px) {
+    max-width: 45ch;
+
+    margin: 1em auto 0;
+
+    text-align: center;
   }
 `;
 
 export const HeroButton = styled(Button)`
+  display: block;
+
   min-width: 16rem;
 
   margin-top: 2em;
+
+  @media screen and (max-width: 768px) {
+    margin: 3em auto 0;
+  }
 `;
 
 export const HeroImage = styled.img`
+  display: block;
+
   position: absolute;
   top: 2rem;
+  z-index: 1;
   right: -10rem;
-  width: 40vw;
+  width: 55rem;
 
   object-fit: contain;
 
-  @media screen and (max-width: 1500px) {
-    width: 42vw;
+  @media screen and (max-width: 900px) {
+    top: 5rem;
+    width: 46rem;
   }
-  @media screen and (max-width: 1300px) {
-    width: 45vw;
-  }
-  @media screen and (max-width: 1200px) {
-    width: 48vw;
-    top: 3rem;
-  }
-  @media screen and (max-width: 1100px) {
-    width: 50vw;
-  }
-  @media screen and (max-width: 1080px) {
-    width: 52vw;
-  }
-  @media screen and (max-width: 1000px) {
-    width: 56vw;
-    top: 4rem;
-  }
-  @media screen and (max-width: 800px) {
-    width: 59vw;
+
+  @media screen and (max-width: 768px) {
+    position: relative;
+    top: 0;
+    right: 0;
+
+    margin: 0 auto;
   }
 `;
