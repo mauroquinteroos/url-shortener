@@ -1,12 +1,23 @@
 import React from "react";
-import { FeaturesWrap } from "../styles/FeaturesStyles";
+import {
+  FeatureDescription,
+  FeatureDescriptionWrap,
+  FeaturesWrap,
+  FeatureTitle,
+} from "../styles/FeaturesStyles";
 import Wrap from "./Wrap";
 
 const Features = () => {
   return (
     <FeaturesWrap>
       <Wrap>
-        <h2>Features</h2>
+        <FeatureDescriptionWrap>
+          <FeatureTitle>Advanced Statistics</FeatureTitle>
+          <FeatureDescription>
+            Track how your links are performing across the web with our advanced
+            statistics dashboard.
+          </FeatureDescription>
+        </FeatureDescriptionWrap>
       </Wrap>
     </FeaturesWrap>
   );

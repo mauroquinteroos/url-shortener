@@ -14,8 +14,6 @@ export const HeroWrap = styled.div`
   }
 `;
 
-export const HeroImageWrap = styled.div``;
-
 export const ContentWrap = styled.div`
   margin-top: 0;
 
