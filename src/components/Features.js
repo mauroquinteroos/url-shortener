@@ -2,15 +2,20 @@ import React from "react";
 import {
   FeatureDescription,
   FeatureDescriptionWrap,
+  FeatureSearcherWrap,
   FeaturesWrap,
   FeatureTitle,
 } from "../styles/FeaturesStyles";
+import Searcher from "./Searcher";
 import Wrap from "./Wrap";
 
 const Features = () => {
   return (
     <FeaturesWrap>
       <Wrap>
+        <FeatureSearcherWrap>
+          <Searcher />
+        </FeatureSearcherWrap>
         <FeatureDescriptionWrap>
           <FeatureTitle>Advanced Statistics</FeatureTitle>
           <FeatureDescription>

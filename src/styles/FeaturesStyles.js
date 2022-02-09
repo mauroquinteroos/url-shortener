@@ -1,8 +1,14 @@
 import styled from "styled-components";
 
 export const FeaturesWrap = styled.section`
+  position: relative;
+
   background-color: ${({ theme }) => theme.colors.gray};
-  min-height: 26.5rem;
+`;
+
+export const FeatureSearcherWrap = styled.div`
+  margin-top: -7.5rem;
+  margin-bottom: 9rem;
 `;
 
 export const FeatureDescriptionWrap = styled.div``;
@@ -19,6 +25,7 @@ export const FeatureTitle = styled.h2`
 
 export const FeatureDescription = styled.p`
   max-width: 50ch;
+
   margin: 0 auto;
   margin-top: 1em;
 

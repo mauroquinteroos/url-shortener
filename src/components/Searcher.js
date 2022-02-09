@@ -1,8 +1,20 @@
 import React from "react";
-import { SearcherWrap } from "../styles/SearcherStyles";
+import {
+  SearcherButton,
+  SearcherForm,
+  SearcherInput,
+  SearcherWrap,
+} from "../styles/SearcherStyles";
 
 const Searcher = () => {
-  return <SearcherWrap></SearcherWrap>;
+  return (
+    <SearcherWrap>
+      <SearcherForm>
+        <SearcherInput placeholder="Shorten a link here" />
+        <SearcherButton>Shorten It!</SearcherButton>
+      </SearcherForm>
+    </SearcherWrap>
+  );
 };
 
 export default Searcher;
